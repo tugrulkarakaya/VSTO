@@ -1,0 +1,88 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+Sub RunAll()
+	CreateTable
+	FormatTable
+End Sub
+
+Sub CreateTable()
+	ActiveCell.FormulaR1C1 = "Column1"
+	Range("B1").Select
+	ActiveCell.FormulaR1C1 = "Column2"
+	Range("C1").Select
+	ActiveCell.FormulaR1C1 = "Column3"
+	Range("D1").Select
+	ActiveCell.FormulaR1C1 = "Column4"
+	Range("A2").Select
+	ActiveCell.FormulaR1C1 = "1"
+	Range("A3").Select
+	ActiveCell.FormulaR1C1 = "2"
+	Range("A4").Select
+	ActiveCell.FormulaR1C1 = "3"
+	Range("A5").Select
+	ActiveCell.FormulaR1C1 = "4"
+	Range("A6").Select
+	ActiveCell.FormulaR1C1 = "5"
+	Range("B2").Select
+	ActiveCell.FormulaR1C1 = "Adam Hairi"
+	Range("B3").Select
+	ActiveCell.FormulaR1C1 = "Sam Lima"
+	Range("B4").Select
+	ActiveCell.FormulaR1C1 = "Emily Hugo"
+	Range("B5").Select
+	ActiveCell.FormulaR1C1 = "Ahmad Hodja"
+	Range("B6").Select
+	ActiveCell.FormulaR1C1 = "Tony Bilmeir"
+	Range("C2").Select
+	ActiveCell.FormulaR1C1 = "UK"
+	Range("C3").Select
+	ActiveCell.FormulaR1C1 = "China"
+	Range("C4").Select
+	ActiveCell.FormulaR1C1 = "France"
+	Range("C5").Select
+	ActiveCell.FormulaR1C1 = "Turkey"
+	Range("C6").Select
+	ActiveCell.FormulaR1C1 = "Germany"
+	Range("D2").Select
+	ActiveCell.FormulaR1C1 = "12500"
+	Range("D3").Select
+	ActiveCell.FormulaR1C1 = "13000"
+	Range("D4").Select
+	ActiveCell.FormulaR1C1 = "10000"
+	Range("D5").Select
+	ActiveCell.FormulaR1C1 = "2500"
+	Range("D6").Select
+	ActiveCell.FormulaR1C1 = "1567"
+	Range("D7").Select
+End Sub
+
+
+Sub FormatTable()
+	Range("A1:D6").Select
+	ActiveSheet.ListObjects.Add(xlSrcRange, Range("$A$1:$D$6"), , xlYes).Name = _
+		"Tablo1"
+	Range("Tablo1[#All]").Select
+	ActiveSheet.ListObjects("Tablo1").TableStyle = "TableStyleDark3"
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
